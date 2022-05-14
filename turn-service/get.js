@@ -4,7 +4,6 @@ module.exports.main = async (event) => {
   const type = event.queryStringParameters.type;
 
   try {
-    const rq = await fetch(configUrl);
     return {
       statusCode: 200,
       body: JSON.stringify(
