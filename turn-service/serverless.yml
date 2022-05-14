@@ -1,0 +1,16 @@
+org: mrcportillo
+app: ic-is-be-2022
+service: turn
+frameworkVersion: '3'
+
+provider:
+  name: aws
+  runtime: nodejs14.x
+
+functions:
+  hello:
+    handler: get.main
+    events:
+      - httpApi:
+          path: /turn
+          method: get
