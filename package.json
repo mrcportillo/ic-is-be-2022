@@ -15,5 +15,60 @@
   "bugs": {
     "url": "https://github.com/mrcportillo/ic-is-be-2022/issues"
   },
-  "homepage": "https://github.com/mrcportillo/ic-is-be-2022#readme"
+  "homepage": "https://github.com/mrcportillo/ic-is-be-2022#readme",
+  "eslintConfig": {
+    "extends": "./node_modules/serverless-bundle/src/eslintrc.json",
+    "rules": {
+      "guard-for-in": "warn",
+      "new-cap": [
+        "error",
+        {
+          "capIsNew": false
+        }
+      ],
+      "no-console": "warn",
+      "no-empty-function": "warn",
+      "no-extra-boolean-cast": "off",
+      "no-restricted-syntax": "off",
+      "no-shadow": "warn",
+      "no-trailing-spaces": "error",
+      "no-unused-expressions": "warn",
+      "no-unused-vars": "warn",
+      "no-useless-constructor": "warn",
+      "no-var": "warn",
+      "object-shorthand": "warn",
+      "prefer-arrow-callback": "warn",
+      "prefer-const": "warn",
+      "quotes": [
+        "warn",
+        "single",
+        {
+          "avoidEscape": true
+        }
+      ],
+      "radix": "off",
+      "require-await": "warn",
+      "spaced-comment": "off",
+      "no-return-assign": "off"
+    },
+    "globals": {
+      "jest": "readonly",
+      "test": "readonly",
+      "describe": "readonly",
+      "expect": "readonly",
+      "afterAll": "readonly",
+      "beforeAll": "readonly",
+      "afterEach": "readonly"
+    }
+  },
+  "engines": {
+    "node": ">0.12"
+  },
+  "prettier": {
+    "singleQuote": true
+  },
+  "devDependencies": {
+    "nanoid": "^3.3.4",
+    "serverless-bundle": "^5.3.0"
+  }
 }
