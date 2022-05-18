@@ -15,8 +15,8 @@ provider:
   runtime: nodejs14.x
 
 functions:
-  hello:
-    handler: ./turn-service/get.main
+  get:
+    handler: turn-service/get.main
     events:
       - httpApi:
           path: /turn
