@@ -1,14 +1,18 @@
-"use strict";
+const { default: Turn } = require('../models/Turn');
 
-module.exports.main = async (event) => {
+module.exports.main = (event) => {
   const type = event.queryStringParameters.type;
-
   try {
+    const turn = Turn.create(
+      type === Turn.TURN_TYPES.VIP
+        ? Turn.TURN_TYPES.VIP
+        : Turn.TURN_TYPES.GENERAL
+    );
     return {
       statusCode: 200,
       body: JSON.stringify(
         {
-          type,
+          turn,
         },
         null,
         2
@@ -19,7 +23,7 @@ module.exports.main = async (event) => {
       statusCode: 500,
       body: JSON.stringify(
         {
-          message: "Something went worng",
+          message: 'Something went worng',
           input: event,
         },
         null,
