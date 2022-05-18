@@ -16,7 +16,7 @@ provider:
 
 functions:
   hello:
-    handler: get.main
+    handler: ./turn-service/get.main
     events:
       - httpApi:
           path: /turn
