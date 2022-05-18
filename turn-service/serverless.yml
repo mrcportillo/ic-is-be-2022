@@ -1,7 +1,14 @@
+service: turn
+
 org: mrcportillo
 app: ic-is-be-2022
-service: turn
 frameworkVersion: '3'
+
+plugins:
+  - serverless-bundle
+
+package:
+  individually: true
 
 provider:
   name: aws
