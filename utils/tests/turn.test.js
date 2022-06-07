@@ -18,7 +18,7 @@ describe('turn utils', () => {
     });
 
     test('should use PREFERAL time by turn', () => {
-      expect(getEstimatedMinutesByType(Turn.TURN_TYPES.PREFERAL, 1)).toBe(3);
+      expect(getEstimatedMinutesByType(Turn.TURN_TYPES.PREFERAL, 1)).toBe(2);
       expect(getEstimatedMinutesByType(Turn.TURN_TYPES.PREFERAL, 4)).toBe(8);
       expect(getEstimatedMinutesByType(Turn.TURN_TYPES.PREFERAL, 10)).toBe(20);
       expect(getEstimatedMinutesByType(Turn.TURN_TYPES.PREFERAL, 0)).toBe(0);
