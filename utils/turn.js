@@ -2,6 +2,7 @@ import assert from 'assert';
 import Turn from '../models/Turn';
 
 const VIP_MINUTES_BY_TURN = 3;
+const PREFERAL_MINUTES_BY_TURN = 2;
 const GENERAL_MINUTES_BY_TURN = 5;
 
 const getEstimatedMinutesByType = (type, positionsBefore) => {
@@ -20,6 +21,10 @@ const getEstimatedMinutesByType = (type, positionsBefore) => {
 
   if (type === Turn.TURN_TYPES.VIP) {
     return positionsBefore * VIP_MINUTES_BY_TURN;
+  }
+
+  if (type === Turn.TURN_TYPES.PREFERAL) {
+    return positionsBefore * PREFERAL_MINUTES_BY_TURN;
   }
 };
 
